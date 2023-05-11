@@ -1,0 +1,233 @@
+
+body {
+    background-color: #FFF8DE;
+    font-family: 'DM Serif Display', serif;    
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 4em;
+    color: #393E46;
+    margin: 50px 50px 10px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    margin: 0px 40px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.navbar a {
+    color: #AA8B56;
+    text-decoration: none;
+}
+
+
+.container{
+    width: 246px;
+    overflow: hidden;
+}
+
+.container .text{
+    position: relative;
+    color: #393E46;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container .text.first-text{
+    color: #393E46;
+    margin-right: 10px;
+}
+
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FFF8DE;
+    border-left: 2px solid;
+    animation: animate 4s steps(12) infinite;
+}
+
+.container>*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+.container{
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.main-container {
+    margin-top: 20px;
+    display: flex;
+    grid-template-columns: 50vh auto;
+    gap: 20px;
+}
+
+.skills {
+    border-right: 1px solid #393E46;
+    line-height: 0.2em;
+}
+
+.skills ul {
+    margin-left: 100px;
+    margin-right: 100px;
+    list-style: none;
+}
+
+
+.skills li {
+    margin-bottom: 50px;
+}
+
+.main-text {
+    display: flex;
+}
+
+.main-text p {
+    width: 90vh;
+    padding: 10px;
+    margin-left: 20px;
+    word-wrap: break-word;
+}
+
+.main-pic {
+    padding: 0;
+    margin-right: 10px;
+    float: left;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #AA8B56;
+    
+}
+
+::selection{
+    background-color: #e7c68d;
+}
+
+.projects-container {
+    margin: 50px;
+    margin-top: 100px;
+}
+
+p{
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+#projects h3 {
+    margin-top: 0;
+    padding: 0;
+}
+
+#projects {
+    --sz: 16px;
+    --b1: #FFF8DE;
+    --b2: #fef6d9;
+    --b3: #fef1bf;
+    --r1: #f8e8af;
+    --r2: #faebb3;
+    --r3: #fae9a9;
+    --ln: #f7e4a1;
+    --ts: 50%/ calc(var(--sz) * 10) calc(var(--sz) * 5);
+    background: 
+    
+    linear-gradient(90deg, #fff0 0 25%, var(--ln) 0 calc(25% + 1px), #fff0 0 50%, var(--ln) 0 calc(50% + 1px), #fff0 0 75%, var(--ln) 0 calc(75% + 1px), #fff0 0 calc(100% - 1px), var(--ln) 0 100%) var(--ts), 
+    
+      conic-gradient(from 180deg at 25% 50%, var(--r2) 0 90deg, var(--b2) 0 180deg, #fff0 0 100%) var(--ts), 
+    
+      conic-gradient(from 180deg at 50% 50%, var(--b3) 0 45deg, #fff0 0 100%) var(--ts), 
+      conic-gradient(from 180deg at 50% 0, var(--r3) 0 45deg, var(--b3) 0 90deg, #fff0 0 100%) var(--ts), 
+    
+      conic-gradient(from 135deg at 75% 50%, var(--b1) 0 45deg, #fff0 0 100%) var(--ts), 
+      conic-gradient(from 90deg at 75% 0, var(--b1) 0 45deg, var(--r1) 0 90deg, #fff0 0 100%) var(--ts), 
+    
+      linear-gradient(180deg, var(--r2) 0 50%, var(--b2) 0 100% ) var(--ts);
+}
+	
+#contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .main-container{
+        flex-direction: column;
+    }
+
+    .skills li{
+        display: inline-block;
+        margin: 0.5em;
+        justify-content: center;
+    }
+
+    .skills {
+        border: none;
+    }
+
+    .main-text {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-text p {
+        margin-top: 20px;
+        width: 100vw;
+        margin-right: 20px;
+    }
+
+    .main-pic {
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .navbar li {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
